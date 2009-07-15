@@ -57,7 +57,8 @@ configure-stamp: debian/stamp-patched $(configure_biarch_stamp)
 		    --infodir=\$${prefix}/share/info \
 		    --datadir=\$${prefix}/share \
 		    --build $(DEB_BUILD_GNU_TYPE) \
-		    --enable-static --disable-maintainer-mode
+		    --enable-static --disable-maintainer-mode \
+		    --disable-python --with-softfloat
 	touch configure-stamp
 
 configure-biarch-stamp: debian/stamp-patched
@@ -133,9 +134,9 @@ ifneq (,$(build_biarch_stamp))
 endif
 	dh_installdirs -s
 	dh_install -s
-	dh_installdocs -plibasound2
-	dh_installexamples -s doc/asoundrc.txt
-	dh_installchangelogs -plibasound2 debian/changelog.ALSA
+#	dh_installdocs -plibasound2
+#	dh_installexamples -s doc/asoundrc.txt
+#	dh_installchangelogs -plibasound2 debian/changelog.ALSA
 	install -D -p -m 0644 -o root -g root debian/lib64asound2.lintian-overrides \
 		debian/lib64asound2/usr/share/lintian/overrides/lib64asound2
 	dh_strip -s
@@ -150,10 +151,10 @@ install-indep: build-indep-stamp
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 	dh_installdirs -i
 	dh_install -i
-	dh_installdocs -i
-	dh_installexamples -i
-	dh_installchangelogs -plibasound2-doc debian/changelog.ALSA
-	cp -r doc/doxygen/html debian/libasound2-doc/usr/share/doc/libasound2-doc
+#	dh_installdocs -i
+#	dh_installexamples -i
+#	dh_installchangelogs -plibasound2-doc debian/changelog.ALSA
+#	cp -r doc/doxygen/html debian/libasound2-doc/usr/share/doc/libasound2-doc
 	dh_compress -i
 	dh_fixperms -i
 

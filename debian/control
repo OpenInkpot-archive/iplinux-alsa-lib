@@ -1,8 +1,7 @@
 Source: alsa-lib
-Section: libs
+Section: core
 Priority: optional
-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
-Uploaders: Jordi Mallach <jordi@debian.org>, Mikael Magnusson <mikma@users.sourceforge.net>, Elimar Riesebieter <riesebie@lxtec.de>
+Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
 Build-Depends: debhelper (>= 7),
                quilt (>= 0.40),
                autotools-dev,
@@ -18,6 +17,8 @@ Build-Depends: debhelper (>= 7),
                gcc-multilib [amd64 i386 powerpc ppc64 s390 sparc],
                python-dev,
                libcxxtools-dev
+XCS-Cross-Build-Depends: libcxxtools-dev
+XCS-Cross-Host-Build-Depends: debhelper (>= 7), quilt (>= 0.40), autotools-dev,
 Standards-Version: 3.8.2
 Homepage: http://www.alsa-project.org/
 Vcs-Svn: svn://svn.debian.org/pkg-alsa/trunk/alsa-lib
