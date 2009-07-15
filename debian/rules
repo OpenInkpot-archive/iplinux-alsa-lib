@@ -52,7 +52,8 @@ configure-stamp: debian/stamp-patched $(configure_biarch_stamp)
 	-rm -f config.sub config.guess
 	ln -s /usr/share/misc/config.sub config.sub
 	ln -s /usr/share/misc/config.guess config.guess
-	./configure --prefix=/usr \
+	./configure --host=$(DEB_HOST_GNU_TYPE) --build='$(DEB_BUILD_GNU_TYPE)' \
+		    --prefix=/usr \
 		    --mandir=\$${prefix}/share/man \
 		    --infodir=\$${prefix}/share/info \
 		    --datadir=\$${prefix}/share \
