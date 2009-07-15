@@ -1,6 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS=doc include src
+SUBDIRS=include src
 if BUILD_MODULES
 SUBDIRS += modules
 endif
