@@ -48,57 +48,57 @@ Description: shared library for ALSA applications -- development files
  .
  ALSA is the Advanced Linux Sound Architecture.
 
-Package: lib64asound2
-Architecture: sparc s390 i386 powerpc
-Depends: libasound2 (= ${binary:Version}), ${shlibs:Depends}, ${bilib:depends}
-Suggests: lib64asound2-plugins (>= 1.0.18)
-Conflicts: libasound2-plugins (<< 1.0.18)
-Description: shared library for ALSA applications (64 bit)
- This package contains the ALSA library (64 bit) and its standard
- plugins.
- .
- ALSA is the Advanced Linux Sound Architecture.
+#Package: lib64asound2
+#Architecture: sparc s390 i386 powerpc
+#Depends: libasound2 (= ${binary:Version}), ${shlibs:Depends}, ${bilib:depends}
+#Suggests: lib64asound2-plugins (>= 1.0.18)
+#Conflicts: libasound2-plugins (<< 1.0.18)
+#Description: shared library for ALSA applications (64 bit)
+# This package contains the ALSA library (64 bit) and its standard
+# plugins.
+# .
+# ALSA is the Advanced Linux Sound Architecture.
 
-Package: lib64asound2-dev
-Architecture: sparc s390 i386 powerpc
-Section: libdevel
-Depends: lib64asound2 (= ${binary:Version}), libasound2-dev (= ${binary:Version}), ${bidev:depends}
-Suggests: libasound2-doc
-Description: shared library for ALSA applications -- development files (64 bit)
- This package contains files required for developing software
- that makes use of lib64asound2, the ALSA library (64 bit).
- .
- ALSA is the Advanced Linux Sound Architecture.
+#Package: lib64asound2-dev
+#Architecture: sparc s390 i386 powerpc
+#Section: libdevel
+#Depends: lib64asound2 (= ${binary:Version}), libasound2-dev (= ${binary:Version}), ${bidev:depends}
+#Suggests: libasound2-doc
+#Description: shared library for ALSA applications -- development files (64 bit)
+# This package contains files required for developing software
+# that makes use of lib64asound2, the ALSA library (64 bit).
+# .
+# ALSA is the Advanced Linux Sound Architecture.
 
-Package: lib32asound2
-Architecture: amd64 ppc64
-Pre-Depends: libc6-i386 (>= 2.9-18)
-Depends: libasound2 (= ${binary:Version}), ${shlibs:Depends}, ${bilib:depends}
-Suggests: lib32asound2-plugins (>= 1.0.18)
-Conflicts: libasound2-plugins (<< 1.0.18), ia32-libs (<< 1.9)
-Replaces: ia32-libs (<< 1.9)
-Description: shared library for ALSA applications (32 bit)
- This package contains the ALSA library (32 bit) and its standard
- plugins.
- .
- ALSA is the Advanced Linux Sound Architecture.
+#Package: lib32asound2
+#Architecture: amd64 ppc64
+#Pre-Depends: libc6-i386 (>= 2.9-18)
+#Depends: libasound2 (= ${binary:Version}), ${shlibs:Depends}, ${bilib:depends}
+#Suggests: lib32asound2-plugins (>= 1.0.18)
+#Conflicts: libasound2-plugins (<< 1.0.18), ia32-libs (<< 1.9)
+#Replaces: ia32-libs (<< 1.9)
+#Description: shared library for ALSA applications (32 bit)
+# This package contains the ALSA library (32 bit) and its standard
+# plugins.
+# .
+# ALSA is the Advanced Linux Sound Architecture.
 
-Package: lib32asound2-dev
-Architecture: amd64 ppc64
-Section: libdevel
-Depends: lib32asound2 (= ${binary:Version}), libasound2-dev (= ${binary:Version}), ${bidev:depends}
-Suggests: libasound2-doc
-Description: shared library for ALSA applications -- development files (32 bit)
- This package contains files required for developing software
- that makes use of lib32asound2, the ALSA library (32 bit).
- .
- ALSA is the Advanced Linux Sound Architecture.
+#Package: lib32asound2-dev
+#Architecture: amd64 ppc64
+#Section: libdevel
+#Depends: lib32asound2 (= ${binary:Version}), libasound2-dev (= ${binary:Version}), ${bidev:depends}
+#Suggests: libasound2-doc
+#Description: shared library for ALSA applications -- development files (32 bit)
+# This package contains files required for developing software
+# that makes use of lib32asound2, the ALSA library (32 bit).
+# .
+# ALSA is the Advanced Linux Sound Architecture.
 
-Package: libasound2-doc
-Architecture: all
-Section: doc
-Suggests: libasound2-dev
-Description: developer documentation for user-space ALSA application programming
- This package contains documentation for the ALSA library.
- .
- ALSA is the Advanced Linux Sound Architecture.
+#Package: libasound2-doc
+#Architecture: all
+#Section: doc
+#Suggests: libasound2-dev
+#Description: developer documentation for user-space ALSA application programming
+# This package contains documentation for the ALSA library.
+# .
+# ALSA is the Advanced Linux Sound Architecture.
