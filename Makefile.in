@@ -652,12 +652,6 @@ dist-hook:
 	else \
 		$(TAR) --create --verbose --file=- $(distdir) | bzip2 -c -9 > $(distdir).tar.bz2 ; \
 	fi
-
-doc-dummy:
-
-doc: doc-dummy
-	$(MAKE) -C include all
-	$(MAKE) -C doc doc
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

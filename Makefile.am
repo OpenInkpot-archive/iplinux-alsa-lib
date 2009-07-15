@@ -30,8 +30,4 @@ dist-hook:
 		$(TAR) --create --verbose --file=- $(distdir) | bzip2 -c -9 > $(distdir).tar.bz2 ; \
 	fi
 
-doc-dummy:
 
-doc: doc-dummy
-	$(MAKE) -C include all
-	$(MAKE) -C doc doc
